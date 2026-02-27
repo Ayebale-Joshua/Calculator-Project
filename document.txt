@@ -32,3 +32,14 @@ Working on.
         - avoid color competion
         - increase font size difference between expression and final result
         - Make DRC, Exp, Ans, % buttons work
+
+
+
+    ------------------ 27/02/2026 --------------------------------------------
+    I decided to learn git and make my code public
+        -Terms am yet adopting include
+            - Repository
+            - Push
+            - Commit
+            - add
+            
