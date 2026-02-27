@@ -45,5 +45,3 @@ Working on.
             
         --------------------------------------
         I have now tried for my tenth time but failing to push and Commit
-
-    
