@@ -1,0 +1,34 @@
+---------- 22-February - 2026 -------------------
+- Successfully made the equal button fit in the layout using nested layouts, BoxLayout---->GridLayout----> Equal sign button
+
+Working on.
+    - Currently working a ButtonStyle class such that all buttons can inherit from it 
+    - I have yet failed to Successfully create it
+    - This class will make configurations of the buttons simple 
+
+    ---------------------------------------------------------------------------------
+    - finally resolved it. The trick was to just use the class name to instantiate it rather than using the standard 
+    tag that creates a standard widget but not inherit from the logic file 
+    
+    _____________________________example ___________________________________
+    |                                                                       |
+    |_____________________main.py___________________________________________|
+    |                                                                       |
+    |       class SampleButton(Button):                                     |
+    |           def __init__(self,**kwargs):                                |
+    |               super().__init__(**kwargs)                              |    
+    |               pass                                                    |
+    |_______________________________________________________________________|
+    |____________________ main.kv___________________________________________|
+    |                                                                       |
+    |       <Button@SampleButton>       ----> is wrong                      |
+    |                                                                       |
+    |       <SampleButton>              -----> Correct                      |
+    |_______________________________________________________________________|
+
+    -----------------Next ------------------------------------------
+        - make the area for result padded
+        - slight round corners on the button
+        - avoid color competion
+        - increase font size difference between expression and final result
+        - Make DRC, Exp, Ans, % buttons work

@@ -1,0 +1,191 @@
+MainScreen:
+
+<MainScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 2
+        spacing: 3
+        canvas.before:
+            Color:
+                rgba: 100/255,97/255,122/255,1
+            Rectangle:
+                size: self.size
+
+        BoxLayout:
+            
+            orientation: 'vertical'
+            size_hint_y: .3
+            
+            
+            Label:
+                size_hint: 1,.5
+                text: root.label_text
+                font_size: 40
+                text_size: self.size
+                halign: 'right'
+                color:"#e4e2ef"
+                bold: True
+            Label:
+                size_hint_y: .5
+                text: root.answer_text
+                font_size: 50
+                text_size: self.size
+                halign: 'right'
+                color:"#e4e2ef"
+                bold: True
+
+        
+        GridLayout:
+            spacing: 3
+            cols:5
+            size_hint_y: .45
+
+            FunctionButton:
+                text: 'Del'
+                font_size: 30
+                on_press: root.delete(self)
+            
+            FunctionButton:
+                text: '('
+                font_size: 30
+                on_press: root.brackets(self)
+
+            FunctionButton:
+                text: ")"
+                font_size: 30
+                on_press: root.brackets(self)
+
+            FunctionButton:
+                text: 'DRG'
+                font_size: 30
+                on_press: root.drg(self)
+
+            Button:
+                text: 'AC'
+                font_size: 30
+                on_press: root.clear(self)
+                background_normal: ''
+                background_color: "#c0153a"
+                bold: True
+
+
+
+            NumberButton:
+                text: '7'
+                font_size: 30
+                on_press: root.pressed(self)
+
+            NumberButton:
+                text: '8'
+                font_size: 30
+                on_press: root.pressed(self)
+
+            NumberButton:
+                text: '9'
+                font_size: 30
+                on_press: root.pressed(self)
+
+            OperationButton:
+                text: '+'
+                font_size: 40
+                on_press: root.operation(self)
+
+            OperationButton:
+                text: '*'
+                font_size: 40
+                on_press: root.operation(self)
+
+
+
+
+            NumberButton:
+                text: '4'
+                font_size: 30
+                on_press: root.pressed(self)
+
+            NumberButton:
+                text: '5'
+                font_size: 30
+                on_press: root.pressed(self)
+
+            NumberButton:
+                text: '6'
+                font_size: 30
+                on_press: root.pressed(self)
+
+            OperationButton:
+                text: '/'
+                font_size: 40
+                on_press: root.operation(self)
+
+            OperationButton:
+                text: '-'
+                font_size: 40
+                on_press: root.operation(self)
+            
+        BoxLayout:
+            size_hint_y:.25
+            spacing: 3
+
+            GridLayout:
+                cols:4
+                spacing:3
+                
+
+                NumberButton:
+                    text: '1'
+                    font_size: 30
+                    on_press: root.pressed(self)
+
+                NumberButton:
+                    text: '2'
+                    font_size: 30
+                    on_press: root.pressed(self)
+
+                NumberButton:
+                    text: '3'
+                    font_size: 30
+                    on_press: root.pressed(self)
+
+                FunctionButton:
+                    text: 'Exp'
+                    font_size: 30
+                    on_press: root.operation(self)
+
+                NumberButton:
+                    text: '.'
+                    font_size: 30
+                    on_press: root.equals(self)
+                    
+
+
+                NumberButton:
+                    text: '0'
+                    font_size: 30
+                    on_press: root.pressed(self)
+                    
+
+                NumberButton:
+                    text: '%'
+                    font_size: 30
+                    on_press: root.pressed(self)
+
+                FunctionButton:
+                    text: 'Ans'
+                    font_size: 30
+                    on_press: root.pressed(self)
+
+                
+
+            Button:
+                size_hint: .245,1
+                text: '='
+                font_size: 50
+                on_press: root.equals(self)
+                background_color: "#422bd9"
+                bold: True
+
+
+
+
+            
